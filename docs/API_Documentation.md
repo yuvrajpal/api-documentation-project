@@ -125,3 +125,52 @@ The base URL for all endpoints is: `http://localhost:3000/api`
       "message": "User not found"
     }
     ```
+
+## Example Requests
+
+### Create User Example
+
+```bash
+  curl -X POST http://localhost:3000/api/users \
+      -H "Content-Type: application/json" \
+      -d '{"username": "newuser", "email": "newuser@example.com"}'
+```
+
+### Get All Users Example
+
+```bash
+  curl -X GET http://localhost:3000/api/users
+```
+
+## Error Handling
+
+- 400 Bad Request: Typically occurs due to missing or invalid input data.
+- 404 Not Found: The requested resource could not be found.
+- 500 Internal Server Error: An unexpected error occurred on the server.
+
+## Setup and Installation
+
+1. Clone the Repository
+
+```bash
+  git clone https://github.com/yuvrajpal/api-documentation-project.git
+  cd api-documentation-project
+```
+
+2. Install Dependencies
+
+```bash
+  npm install
+```
+
+3. Create a .env File
+
+```env
+  PORT=3000
+```
+
+4. Start the Application
+
+```bash
+  npm start
+```
